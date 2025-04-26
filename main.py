@@ -18,7 +18,7 @@ class User(BaseModel):
     age: int
 
 @app.get("/")
-async def get_all_users():
+async def index():
     return {
         "message": "Hello world"
     }
