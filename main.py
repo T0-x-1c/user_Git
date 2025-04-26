@@ -17,10 +17,16 @@ class User(BaseModel):
     password: str
     age: int
 
+@app.get("/")
+async def get_all_users():
+    return {
+        "message": "Hello world"
+    }
+
 @app.get("/users/all")
 async def get_all_users():
     '''
-    Повертає данны про користувачів
+    Повертає данні про користувачів
     '''
     return users
 
